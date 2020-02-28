@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notigraghy.View.MainView">
+
+    <AbsoluteLayout>
+        <!--Contents-->
+        <ContentView  AbsoluteLayout.LayoutBounds="0,0,1,0.92" AbsoluteLayout.LayoutFlags="All" 
+                      Content="{Binding BodyView}"/>
+        
+        <!--TabMenu-->
+        <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,0.08" AbsoluteLayout.LayoutFlags="All"
+                     VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#FFFFFF"
+                     Padding="1" Orientation="Horizontal">
+            <Button Text="FEED" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Command="{Binding TabFeedCommand}" BackgroundColor="#FFFFFF" Padding="0"/>
+            <Button Text="LIST" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Command="{Binding TabListCommand}" BackgroundColor="#FFFFFF" Padding="0"/>
+            <Button Text="QUICKNOTE" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Command="{Binding TabQuickNoteCommand}" BackgroundColor="#FFFFFF" Padding="0"/>
+            <Button Text="CREATE" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Command="{Binding TabCreateNoteCommand}" BackgroundColor="#FFFFFF" Padding="0"/>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>
